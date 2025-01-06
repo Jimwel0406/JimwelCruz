@@ -1,0 +1,130 @@
+.block-puzzle-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.block-puzzle-box {
+
+  width: 300px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  background-color: #f1f1f1;
+
+}
+
+.block-puzzle-box > button {
+
+  padding: 0;
+  border: none;
+  display: flex;
+  background-color: white;
+
+}
+
+.block-puzzle-box > button:nth-of-type(10) {
+
+  width: unset;
+  height: unset;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: transparent;
+
+}
+
+.block-puzzle-box > button > img {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.block-puzzle-menu {
+
+  height: 100%;
+  padding-inline: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  font-size: 2rem;
+
+}
+
+.block-puzzle-menu-cover {
+
+  display: none;
+  position: absolute;
+  inset: 0;
+
+}
+
+.block-puzzle-cover {
+
+  position: absolute;
+  inset: 0;
+
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+
+  .block-puzzle-box {
+
+    width: 80%;
+
+  }
+
+  .block-puzzle-box > button:nth-of-type(10) {
+
+    top: initial;
+    bottom: 100%;
+    right: initial;
+    left: -1px;
+
+  }
+
+  .block-puzzle-menu {
+
+    width: 100%;
+    height: initial;
+    padding-inline: initial;
+    padding-block: 25px;
+    top: 100%;
+    left: initial;
+
+  }
+
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .block-puzzle-box {
+
+    width: 200px;
+
+  }
+
+}
+
+@media (max-height: 500px) and (orientation: portrait) {
+
+  .block-puzzle-box {
+
+    width: 70%;
+    margin-top: 80px;
+
+  }
+
+}
+

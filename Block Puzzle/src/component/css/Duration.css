@@ -1,0 +1,33 @@
+.duration-container {
+
+  padding: 5px;
+
+}
+
+.duration-container > strong {
+
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+
+  .duration-container > strong {
+
+    font-size: 1.5rem;
+
+  }
+  
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .duration-container > strong {
+
+    font-size: 1.5rem;
+
+  }
+
+}

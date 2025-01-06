@@ -1,0 +1,42 @@
+.timetobeat-container {
+
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.timetobeat-container > strong {
+
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+
+  .timetobeat-container {
+
+    position: initial;
+
+  }
+
+  .timetobeat-container > strong {
+
+    font-size: 1.5rem;
+
+  }
+
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .timetobeat-container > strong {
+
+    font-size: 1.5rem;
+
+  }
+
+}
