@@ -1,0 +1,466 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(40deg,crimson,violet,orange,skyblue,gold,crimson);
+    background-repeat: no-repeat;
+    background-size: 800% 600%;
+    background-position: 100% 0;
+    animation: moveBgColor 30s linear infinite alternate;
+    user-select: none;
+    overflow: hidden;
+  }
+  
+  @keyframes moveBgColor {
+    100% {background-position: 0 20%;}
+  }
+
+  .grid-container {
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .grid {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+  }
+  
+  .grid > div:not(:nth-of-type(10)) {
+    background-color: white;
+  }
+
+  .start-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background-color: dodgerblue;
+    opacity: 0.9;
+  }
+
+  .start-screen > strong {
+    font-family: cursive;
+    font-size: 2rem;
+    color: red;
+    -webkit-text-stroke: 1px white;
+    cursor: pointer;
+  }
+
+  .start-screen > strong:hover {
+    color: lime;
+  }
+
+  .time_speed-container {
+    height: 340px;
+    width: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 0;
+  }
+
+  .time_speed-cover {
+    display: none;
+    position: absolute;
+    inset: 0;
+  }
+
+  .time_speed-container > div:not(:nth-of-type(3)) {
+    flex: 1;
+  }
+
+  .time-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+    position: relative;
+    float: right;
+    background-color: red;
+  }
+
+  .time-container > strong {
+    width: 100%;
+    padding-block: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: seagreen;
+  }
+
+  .time-container > button {
+    padding: 10px 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .active-time-btn {
+    background-color: yellow;
+  }
+
+   .speed-container {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column;
+    position: relative;
+    float: right;
+    background-color: blue;
+  }
+
+  .speed-container > strong {
+    width: 100%;
+    padding-block: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: seagreen;
+  }
+
+   .speed-container > button {
+    padding: 10px 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .active-speed-btn {
+    background-color: yellow;
+  }
+  
+  .high-score {
+    margin-top: 14px;
+    margin-left: 8px;
+    font-family: cursive;
+    font-size: 22px;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .flex {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    animation: scoreShadow 1.5s linear infinite alternate;
+    box-shadow: 0 0 5px 1px green inset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  @keyframes scoreShadow {
+    100% {box-shadow: 0 0 5px 8px lime inset;}
+  }
+  
+  .flex > h2 {
+    text-align: center;
+    flex: 50%;
+    font-family: sans-serif;
+    color: white;
+  }
+  
+  .flex-heart {
+    margin-left: 8px;
+    margin-top: 4px;
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 190px;
+    border-radius: 20px;
+    padding: 10px 0 15px 12px;
+  }
+  
+  .left-heart {
+    width: 25px;
+    height: 30px;
+    background-color: red;
+    border-radius: 40px 40px 0 0;
+    transform: rotate(-60deg);
+    animation: heartColor 300ms linear 5;
+  }
+  
+  .right-heart {
+    width: 25px;
+    height: 30px;
+    background-color: red;
+    border-radius: 40px 40px 0 0;
+    transform: rotate(60deg);
+    position: relative;
+    left: -11px;
+    animation: heartColor 300ms linear 5;
+  }
+  
+  .position_1 {
+    position: relative;
+    left: 20px;
+    animation: heartColor 300ms linear 5 200ms;
+  }
+  
+  .position_2 {
+    position: relative;
+    left: 9px;
+    animation: heartColor 300ms linear 5 200ms;
+  }
+  
+  .position_3 {
+    position: relative;
+    left: 40px;
+    animation: heartColor 300ms linear 5 400ms;
+  }
+  
+  .position_4 {
+    position: relative;
+    left: 29px;
+    animation: heartColor 300ms linear 5 400ms;
+  }
+  
+  @keyframes heartColor {
+    100% {background-color: white;}
+  }
+
+  .customize-button {
+    margin-top: 4px;
+    margin-right: 8px;
+    border: unset;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: green;
+    border-radius: 50%;
+  }
+
+  .customize-button > i {
+    padding: 10px 5px;
+    font-size: 1.8rem;
+  }
+
+  .customize-container {
+    width: 100%;
+    height: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background-color: #e8f443;
+  }
+
+  @media (max-width: 1000px) and (orientation: portrait) {
+
+    .grid-container {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .grid {
+      width: 500px;
+      height: 500px;
+    }
+
+    .time_speed-container {
+      width: 400px;
+      height: 205px;
+      margin-bottom: 25px;
+      bottom: 100%;
+      right: 50%;
+      flex-flow: column;
+      transform: translateX(50%);
+    }
+
+    .time-container {
+      flex-flow: row;
+    }
+
+    .time-container > strong {
+      padding-block: 5px;
+      font-size: 22px;
+    }
+
+    .time-container > button {
+      margin-top: 40px;
+    }
+
+     .speed-container {
+      margin: 0;
+      flex-flow: row;
+    }
+
+    .speed-container > strong {
+      padding-block: 5px;
+      font-size: 22px;
+    }
+
+    .speed-container > button {
+      margin-top: 40px;
+    }
+
+  }
+
+  @media (max-width: 500px) and (orientation: portrait) {
+
+    .customize-button {
+      display: block;
+    }
+
+    .flex {
+      width: 90%;
+    }
+
+    .grid {
+      width: 90%;
+      height: 300px;
+    }
+
+    .time_speed-container {
+      display: none;
+    }
+
+    .time_speed-container_2 {
+      width: 90%;
+      margin-bottom: 0;
+      bottom: initial;
+      right: initial;
+      display: flex;
+      transform: translateX(0);
+    }
+
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+
+    .customize-container {
+      top: initial;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .customize-button {
+      margin-bottom: 4px;
+      display: block;
+      top: initial;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .flex-container {
+      margin-top: 4px;
+      margin-right: 8px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .flex {
+      width: 250px;
+    }
+
+    .flex > h2 {
+      margin-block: 10px;
+    }
+
+    .grid-container {
+      margin-block-end: 10px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .grid {
+      width: 300px;
+      height: 260px;
+    }
+
+    .time_speed-container {
+      display: none;
+    }
+
+    .time_speed-container_2 {
+      height: 140px;
+      display: flex;
+      flex-flow: column;
+      right: initial;
+    }
+
+    .time-container {
+      flex-flow: row;
+    }
+
+    .time-container > strong {
+      padding-block: 5px;
+      font-size: 16px;
+    }
+
+    .time-container > button {
+      padding: 8px;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+
+    .speed-container {
+      margin: 0;
+      flex-flow: row;
+    }
+
+    .speed-container > strong {
+      padding-block: 5px;
+      font-size: 16px;
+    }
+
+    .speed-container > button {
+      padding: 8px;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+
+
+  }
+
+  @media (max-height: 380px) and (orientation: landscape) {
+
+    .grid {
+      width: 250px;
+      height: 200px;
+    }
+
+  }
+
+  @media (max-height: 320px) and (orientation: landscape) {
+
+    .grid {
+      width: 240px;
+      height: 190px;
+    }
+
+  }
+
+  @media (max-width: 320px) and (max-height: 500px) {
+
+    .grid {
+      height: 175px;
+    }
+
+  }
+ 

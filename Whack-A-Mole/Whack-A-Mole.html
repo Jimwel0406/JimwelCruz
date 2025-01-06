@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+
+    <title> Whack-A-Mole </title>
+    <meta charset="utf-8">
+    <meta name="keyword" content="Quizipedia,whack-a-mole,Games,HTML,CSS,JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/b128baa120.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  
+  <div class="flex-heart">
+    <div class="left-heart" id="heart"></div>
+    <div class="right-heart" id="heart"></div>
+    <div class="left-heart position_1" id="heart"></div>
+    <div class="right-heart position_2" id="heart"></div>
+    <div class="left-heart position_3" id="heart"></div>
+    <div class="right-heart position_4" id="heart"></div>
+  </div>
+
+  <div class="customize-container">
+    <div class="time_speed-container time_speed-container_2">
+      <div class="time-container">
+        <strong>Time</strong>
+        <button class="active-time-btn">15s</button>
+        <button>30s</button>
+        <button>60s</button>
+      </div>
+       <div class="speed-container">
+        <strong>Speed</strong>
+        <button class="active-speed-btn">1x</button>
+        <button>2x</button>
+        <button>3x</button>
+      </div>
+      <div class="time_speed-cover"></div>
+    </div>
+  </div>
+
+  <button class="customize-button" onclick="toggleCustomizeContainer()"><i class="fa-solid fa-wrench" style="color: #e8f443;"></i></button>
+  
+  <h2 class="high-score">Highest Score: <span id="highestScore"></span></h2>
+  
+  <div class="flex-container">
+    <div class="flex" id="scoreShadow">
+      <h2>Score</h2>
+      <h2>Time</h2>
+      <h2 id="score">0</h2>
+      <h2 id="time">15s</h2>
+    </div>
+  </div>
+  
+  <div class="grid-container">
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="start-screen">
+        <strong onclick="setTimeout(gameStart, 1500); resetGame()">START!</strong>
+      </div>
+    </div>
+    <div class="time_speed-container">
+      <div class="time-container">
+        <strong>Time</strong>
+        <button class="active-time-btn">15s</button>
+        <button>30s</button>
+        <button>60s</button>
+      </div>
+       <div class="speed-container">
+        <strong>Speed</strong>
+        <button class="active-speed-btn">1x</button>
+        <button>2x</button>
+        <button>3x</button>
+      </div>
+      <div class="time_speed-cover"></div>
+    </div>
+  </div>
+  
+  
+  <script src="script.js"></script>
+  
+  
+  </body>
+</html>
+    
+    
+    
